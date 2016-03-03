@@ -1,0 +1,26 @@
+#:kivy 1.9.1
+
+<Dashboard>:
+    Label:
+        font_size: 40  
+        center_x: root.width / 4
+        top: root.top - 10
+        text: "RPM"
+
+    Label:
+        font_size: 40  
+        center_x: root.width * 3 / 4
+        top: root.top - 10
+        text: "MPG"
+
+    Label:
+        font_size: 70  
+        center_x: root.width / 4
+        top: root.top - 55
+        text: str(root.rpm)
+        
+    Label:
+        font_size: 70  
+        center_x: root.width * 3 / 4
+        top: root.top - 55
+        text: str(root.mpg)
