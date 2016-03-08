@@ -1,26 +1,60 @@
 #:kivy 1.9.1
 
 <Dashboard>:
-    Label:
-        font_size: 40  
-        center_x: root.width / 4
-        top: root.top - 10
-        text: "RPM"
+    GridLayout:
+        cols: 3
+        width: root.width
+        height: root.height
+##########################################
+        Label:
+            font_size: 20  
+            text: "Speed"
+        Label:
+            font_size: 20  
+            text: "RPM"
+        Label:
+            font_size: 20  
+            text: "Fuel Rate"
+##########################################
+        Label:
+            font_size: 55  
+            size_hint_x: None
+            width: root.width / 3
+            text: str(root.spd)
+        Label:
+            font_size: 55  
+            size_hint_x: None
+            width: root.width / 3
+            text: str(root.rpm)
+        Label:
+            font_size: 55  
+            size_hint_x: None
+            width: root.width / 3
+            text: str(root.fuel_rate)
+##########################################
+        Label:
+            font_size: 20  
+            text: ""
+        Label:
+            font_size: 20  
+            text: "Coolant Tmp"
+        Label:
+            font_size: 20  
+            text: ""
+##########################################
+        Label:
+            font_size: 55  
+            size_hint_x: None
+            width: root.width / 3
+            text: ""
+        Label:
+            font_size: 55  
+            size_hint_x: None
+            width: root.width / 3
+            text: str(root.coolant_tmp)
+        Label:
+            font_size: 55  
+            size_hint_x: None
+            width: root.width / 3
+            text: ""
 
-    Label:
-        font_size: 40  
-        center_x: root.width * 3 / 4
-        top: root.top - 10
-        text: "MPG"
-
-    Label:
-        font_size: 70  
-        center_x: root.width / 4
-        top: root.top - 55
-        text: str(root.rpm)
-        
-    Label:
-        font_size: 70  
-        center_x: root.width * 3 / 4
-        top: root.top - 55
-        text: str(root.mpg)
